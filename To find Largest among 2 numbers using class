@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+class greaterOfTwo{
+    private:
+    int n1, n2;
+    public:
+    void get();
+    void findGreater();
+};
+void greaterOfTwo:: get(){
+    cout << "Enter of Numbers: ";
+    cin >> n1 >> n2;
+}
+void greaterOfTwo:: findGreater(){
+    if(n1>n2){
+        cout << n1 << " is Greater";
+    }
+    else 
+    cout << n2 << " is Greater";
+}
+int main(){
+    cout << "Bhavya's Code\n";
+    cout << "..................\n";
+    greaterOfTwo ob;
+    ob.get();
+    ob.findGreater();
+    return 0;
+}
