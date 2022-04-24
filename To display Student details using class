@@ -1,0 +1,37 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class studentDetails{
+    private:
+    string name, regno;
+    int age, cls;
+    public:
+    void getDetails();
+    void printDetails();
+};
+void studentDetails:: getDetails(){
+    cout << "Enter Name: ";
+    getline(cin, name);
+    cout << "Enter age: ";
+    cin >> age;
+    cout << "Enter class: ";
+    cin >> cls;
+    cout << "Enter reg. no.: ";
+    getline(cin, regno);
+}
+void studentDetails:: printDetails(){
+    cout << "Name: " << name << endl;;
+    cout << "Age: " << age << endl;
+    cout << "Class: "<< cls << endl;
+    cout << "Reg. No. " << regno << endl;
+}
+int main(){
+    cout << "Bhavya's Code\n";
+    cout << ".................\n";
+    studentDetails s;
+    s.getDetails();
+    cout << "\nDetails: \n";
+    s.printDetails();
+    return 0;
+}
