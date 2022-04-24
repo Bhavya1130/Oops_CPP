@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+class reverseNum{
+    private:
+    int num;
+    public:
+    void getNum();
+    void display();
+};
+void reverseNum:: getNum(){
+    cout << "Enter a number: ";
+    cin >> num;
+}
+void reverseNum:: display(){
+    int r=0, n, temp;
+    temp = num;
+    while(num>0){
+        n = num%10;
+        r = (r*10) + n;
+        num= num / 10;
+    }
+    cout << r;
+}
+int main(){
+    cout << "Bhavya's code\n";
+    cout << ".................\n";
+    reverseNum ob;
+    ob.getNum();
+    ob.display();
+    return 0;
+}
