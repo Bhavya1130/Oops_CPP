@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+class factorial{
+    private:
+    int num;
+    public:
+    void getNum();
+    void display();
+};
+void factorial:: getNum(){
+    cout << "Enter a number: ";
+    cin >> num;
+}
+void factorial:: display(){
+    int f=1, temp;
+    temp = num;
+    while(num>1){
+        f*=num;
+        num--;
+    }
+    cout << "Factorial of " << temp << " : " << f; 
+}
+int main()
+{
+    cout << "Bhavya's code\n";
+    cout << "...................\n";
+    factorial ob;
+    ob.getNum();
+    ob.display();
+    return 0;
+}
