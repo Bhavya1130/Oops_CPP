@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+class calculator{
+    private:
+    float n1, n2;
+    char ch;
+    public:
+    void getNum();
+    void calc();
+};
+void calculator:: getNum(){
+    cout << "Give Input(Number1 Operator Number2): ";
+    cin >> n1 >> ch >> n2;
+}
+void calculator:: calc(){
+    switch(ch){
+        case '+': 
+        cout << "sum: " << (n1+n2) << endl;
+        break;
+        case '-':{
+            if(n1>n2)
+            cout << "Difference: " << (n1-n2) << endl;
+            else
+            cout << "Difference: " << (n2-n1) << endl;
+        }
+        break;
+        case '*':
+        cout << "Product: " << n1*n2 << endl;
+        break;
+        case '/':{;
+        cout << "Quotient: " << n1/n2 << endl;
+        }
+        break;
+        default:
+        cout << "Enter correct input";
+    }
+}
+int main(){
+    cout << "Bhavya's Code\n";
+    cout << "..................\n";
+    calculator ob;
+    ob.getNum();
+    ob.calc();
+    return 0;
+}
