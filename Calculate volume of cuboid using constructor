@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+class calcVol{
+    private:
+    int len, bre, wid;
+    public:
+    calcVol(){                      //Default Constructor
+        cout << "Enter length: ";
+        cin >> len;
+        cout << "Enter bredth: ";
+        cin >> bre;
+        cout << "Enter width: ";
+        cin >> wid;
+    }
+    calcVol(int x, int y, int z){   //Parametarized Constructor
+        len = x;
+        bre = y;
+        wid = z;
+    }
+    void show(){
+        cout << len*bre*wid << endl;
+    }
+};
+int main()
+{
+    cout << "Bhavya's Code\n";
+    cout << ".................\n";
+    calcVol c1, c2(6, 7, 8);
+    cout << "\nVolume of cuboid1: ";
+    c1.show();
+    cout << "\nVolume of cuboid2: ";
+    c2.show();
+   
+	return 0;
+}
