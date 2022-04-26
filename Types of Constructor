@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+class num{
+    private:
+    int a, b;
+    public:
+    num(){                     //Default Constructor
+        a = 3;
+        b = 5;
+    }
+    num(int x, int y){        //Parameterized Constructor
+        a = x;
+        b = y;
+    }
+    num(num &m){              //Copy Constructor
+        a = m.a;
+        b = m.b;
+    }
+    void show(){
+        cout << "\na: " << a;
+        cout << "\nb: " << b;
+    }
+};
+int main()
+{
+    cout << "Bhavya's Code\n";
+    cout << ".................\n";
+    num ob1;                 // Default Constructor Called
+    num ob2(3, 5);           // Parameterized Constructor Called
+    num ob3(ob2);            // Copy Constructor Called
+    num ob4(ob1);            // Copy Constructor Called
+    ob1.show();
+    ob2.show();
+    ob3.show();
+    ob4.show();
+	return 0;
+}
