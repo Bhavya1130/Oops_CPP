@@ -28,7 +28,7 @@ class book{
 };
 int main(){
     cout << "Bhavya's Code\n";
-    cout << ".................\n";
+    cout << "..................\n";
     int m;
     cout << "Enter number of book details you want to enter: ";
     cin >> m;
