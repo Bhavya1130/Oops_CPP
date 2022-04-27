@@ -1,0 +1,45 @@
+#include <iostream>
+#include <stdlib.h>
+#include <string>
+using namespace std;
+
+class book{
+    private:
+    string name, aname, about;
+    int price;
+    public:
+    void getDetails(){
+        cin.ignore();
+        cout << "Book Name: ";
+        getline(cin, name);
+        cout << "Author Name: ";
+        getline(cin, aname);
+        cout << "Book Catagory: ";
+        getline(cin, about);
+        cout << "Book Price: ";
+        cin >> price;
+    }
+    void showDetails(){
+        cout << "\nBook Name: " << name;
+        cout << "\nBook Author Name: " << aname;
+        cout << "\nBook is about: " << about;
+        cout << "\nPrice: " << price << endl;
+    }
+};
+int main(){
+    cout << "Bhavya's Code\n";
+    cout << ".................\n";
+    int m;
+    cout << "Enter number of book details you want to enter: ";
+    cin >> m;
+    book *pt = new book[m];             // Memory Allocated Dynamically
+    for(int i=0; i< m; i++){
+        (pt+i)->getDetails();
+    }
+    for(int i=0; i< m; i++){
+        cout << "\nDetails of " << i+1 <<" book: "<< endl;
+        (pt+i)->showDetails();
+    }
+    delete [] pt;
+    return 0;
+}
