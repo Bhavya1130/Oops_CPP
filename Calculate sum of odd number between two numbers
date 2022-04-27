@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+class sum{
+    private:
+    int min, max, s=0;
+    public:
+    void getNum(){
+        cout << "Enter the min and max limit: ";
+        cin >> min >> max;
+    }
+    void calc(){
+        for(int i=min; i <= max; i++){
+            if(i%2 != 0){
+                s = s+i; 
+            }
+        }
+    }
+    void display(){
+        cout << "Sum of odd numbers between " << min << " & " << max << " : " << s;
+    }
+};
+int main(){
+    cout << "Bhavya's Code\n";
+    cout << ".................\n";
+    sum ob;
+    ob.getNum();
+    ob.calc();
+    ob.display();
+    return 0;
+}
